@@ -1,5 +1,4 @@
-
-import { db } from "./config/firebase"; // update with your path to firestore config
+import { db } from "./firebase"; 
 import { collection, query, where, getDocs } from "firebase/firestore";
 import "bulma/css/bulma.min.css";
 
@@ -27,5 +26,11 @@ table += "</tr>";
 
 
 setTimeout(() => {
+  try {
     document.getElementById("wrap").innerHTML += table;
+  } catch (error) {
+    console.log(error);
+  }
 }, 1000);
+
+export default school;

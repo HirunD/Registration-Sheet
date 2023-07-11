@@ -1,18 +1,20 @@
-import { useState, useEffect } from "react";
-import "./DataList";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Schools from './pages/schools';
+import Students from './pages/students';
+import Landing from './pages/landing';
 
 function App() {
   return (
-    <table class="table" id="wrap">
-       <thead>
-    <tr>
-      <th><abbr title="Position">School</abbr></th>
-      <th><abbr title="Played">Adress</abbr></th>
-      <th><abbr title="Won">Email</abbr></th>
-      <th><abbr title="Drawn">Whatsapp No</abbr></th>
-    </tr>
-  </thead>
-    </table>
+    <div>
+     <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/schools" element={<Schools />} />
+          <Route path="/students" element={<Students />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
