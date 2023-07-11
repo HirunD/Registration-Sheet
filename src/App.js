@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./DataList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <table class="table" id="wrap">
+       <thead>
+    <tr>
+      <th><abbr title="Position">School</abbr></th>
+      <th><abbr title="Played">Adress</abbr></th>
+      <th><abbr title="Won">Email</abbr></th>
+      <th><abbr title="Drawn">Whatsapp No</abbr></th>
+    </tr>
+  </thead>
+    </table>
   );
 }
 
